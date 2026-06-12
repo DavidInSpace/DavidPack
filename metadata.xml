@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>DavidPack</name>
+    <directory>davidpack</directory>
+    <id>3714817685</id>
+    <description>[h1]!!! THIS MOD REQUIRES REPENTAGON+ !!![/h1]
+
+Hello there! Thank you for downloading this mod :D This mod which adds a lot of random things there isn't really a set theme:
+20 Collectibles
+2 Trinkets
+1 Consumable
+1 Transformation
+3 Curses
+
+[b]IsaacGuru:[/b] https://isaacguru.com/mod/davidpack
+
+If you find any bugs please report them in the forum below
+
+This mod is developed by just 1 person so updates might take a while to come out!
+
+If you need/want to contact me for any reason add me on discord
+Discord Username: davidinspace_
+
+Credits:
+[b]My friend Kroko[/b] - Came up with the name for Overcharged Battery Suggested Mixed Emotions
+[b]Random[/b] - Drew sprite for A Bit Of Chaos
+[b]Foks Booster Pack[/b] - Used as a reference for code when I wasn't sure what to do (especially the button for Risk Of Gambling)
+[b]Heavens Call[/b] - Used to figure out how to implement dead sea scrolls menu
+[b]Daydream All Day[/b] - Used as a reference for code
+[b]Lazymatt Pack[/b] - Helped me figure out how to make animated thumbnail
+[b]Romes Rig Emporium[/b] - Helped me figure out how to adding costumes works
+Also thanks to the Modding Of Isaac Discord server for helping me with stuff</description>
+    <version>2.0.3</version>
+    <visibility>Public</visibility>
+    <tag id="Lua"/>
+    <tag id="Items"/>
+    <tag id="Active Items"/>
+    <tag id="Trinkets"/>
+    <tag id="Cards"/>
+    <tag id="Familiars"/>
+</metadata>

@@ -1,0 +1,23 @@
+<sounds root="sfx/">
+
+     <sound name="glass_shards_collision">
+          <sample weight="1" path="glass_shard_break.wav"/>
+     </sound>
+
+     <sound name="lets_go_gambling">
+          <sample weight="1" path="lets_go_gambling.wav"/>
+     </sound>
+
+     <sound name="aw_dang_it">
+          <sample weight="1" path="aw_dang_it.wav"/>
+     </sound>
+
+     <sound name="i_cant_stop_winning">
+          <sample weight="1" path="i_cant_stop_winning.wav"/>
+     </sound>
+
+     <sound name="creeper_his">
+          <sample weight="1" path="creeper_hiss.wav"/>
+     </sound>
+
+</sounds>

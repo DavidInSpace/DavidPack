@@ -1,0 +1,4 @@
+<pocketitems>
+	<card weight="0.4" type="tarot" pickup="500" hud="Expired Lottery Ticket" description="Forgot to use it" name="Expired Lottery Ticket" mimiccharge="12" />
+</pocketitems>
+    <!--card type="special" name="Lottery Ticket" hud="Expired Ticket" description="" pickup="101" mimiccharge="12"/-->

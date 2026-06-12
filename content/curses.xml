@@ -1,0 +1,10 @@
+<curses>
+	<!--<curse name="Curse of the Giant" />-->
+
+	<curse name="Curse of the Blackout!" /> <!--Super Curse of the Darnkess!-->
+	<curse name="Curse of the Catacomb!" /> <!--Super Curse of the Labyrinth!-->
+	<curse name="Curse of the Absolute Disorientation!" /> <!--Super Curse of the Lost!-->
+	<curse name="Curse of the Unfathomable!" /> <!--Super Curse of the Unknown!-->
+	<curse name="Curse of the Unpredictability!" /> <!--Super Curse of the Maze!-->
+	<curse name="Curse of the Visionless!" /> <!--Super Curse of the Blind!-->
+</curses>

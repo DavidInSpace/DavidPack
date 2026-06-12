@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ItemPools>
+
+	<Pool Name="planetarium">
+	
+	</Pool>
+
+
+    <Pool Name="secret">
+		<Item Name="Handcuffs" Weight="0.08" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Torn Death Certificate" Weight="0.5" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Rune Certificate" Weight="1" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+    <Pool Name="greedSecret">
+		<Item Name="Handcuffs" Weight="0.08" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="devil">
+		<Item Name="Risk Of Gambling" Weight="0.25" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="A Bit Of Chaos" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="greedDevil">
+		<Item Name="Risk Of Gambling" Weight="0.25" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="A Bit Of Chaos" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="demonBeggar">
+		<Item Name="Prison Jumpsuit" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Dirty Prison Jumpsuit" Weight="0.1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="curse">
+		<Item Name="Prison Jumpsuit" Weight="0.3" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Dirty Prison Jumpsuit" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="A Bit Of Chaos" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+
+	<Pool Name="greedCurse">
+		<Item Name="Prison Jumpsuit" Weight="0.3" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Dirty Prison Jumpsuit" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="A Bit Of Chaos" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="ultraSecret">
+		<Item Name="Prison Jumpsuit" Weight="0.08" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Dirty Prison Jumpsuit" Weight="0.05" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Risk Of Gambling" Weight="0.4" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="bombBum">
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="angel">
+		<Item Name="Torn Death Certificate" Weight="0.8" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Mixed Emotions" Weight="0.5" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="greedAngel">
+		<Item Name="Mixed Emotions" Weight="0.5" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="treasure">
+		<Item Name="Blue Screen" Weight="0.8" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Overbent Spoon" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="greedTreasure">
+		<Item Name="Blue Screen" Weight="0.8" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Overbent Spoon" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="craneGame">
+		<Item Name="The Overcharged Battery" Weight="0.15" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Overcharged Baby" Weight="0.15" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Risk Of Gambling" Weight="0.08" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.4" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Overbent Spoon" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+	<Pool Name="batteryBum">
+		<Item Name="The Overcharged Battery" Weight="0.06" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Overcharged Baby" Weight="0.06" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+	<Pool Name="shop">
+		<Item Name="Handcuffs" Weight="0.15" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Risk Of Gambling" Weight="0.3" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Medical Certificate" Weight="1" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="The Overcharged Battery" Weight="0.25" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Overcharged Baby" Weight="0.25" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.4" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+
+	<Pool Name="greedShop">
+		<Item Name="Handcuffs" Weight="0.15" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="The Overcharged Battery" Weight="0.6" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Risk Of Gambling" Weight="0.3" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.4" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="beggar">
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="boss">
+		<Item Name="Rune Certificate" Weight="0.8" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Medical Certificate" Weight="1" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="greedBoss">
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+
+	<Pool Name="redChest">
+		<Item Name="Risk Of Gambling" Weight="0.01" DecreasedBy="1" RemovedOn="0.1"/>
+		<Item Name="Prison Jumpsuit" Weight="0.1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Dirty Prison Jumpsuit" Weight="0.08" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+
+	<Pool Name="goldenChest">
+			<Item Name="Mixed Emotions" Weight="0.15" DecreaseBy="1" RemoveOn="0.1"/>
+			<Item Name="Kayos_Nox" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+			<Item Name="Creeper" Weight="0.2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+	
+	<Pool Name="library">
+
+	</Pool>
+</ItemPools>

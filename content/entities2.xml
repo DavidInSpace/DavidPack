@@ -1,0 +1,41 @@
+<entities anm2root="gfx/" version="5">
+
+
+    <!-- Effects -->
+
+	<entity id="1000" variant="450" subtype="100" name="Gambling Button" anm2path="effect_gamblingbutton.anm2" 
+		friction="1" collisionRadius="10"/>
+
+    <entity id="1000" variant="451" subtype="100" name="Choco Waffles Icon" anm2path="effect_choco_waffles_icon.anm2" 
+		friction="0" collisionRadius="0"/>
+
+
+	<!-- Familiars -->
+
+	<entity id="3" variant="450" name="Overcharged Baby Familiar" shadowSize="11" friction="1" anm2path="familiars/familiar_overcharged_baby.anm2" tags="cansacrifice"/>
+	<entity id="3" variant="451" name="Kayos_Nox Familiar" shadowSize="11" friction="1" anm2path="familiars/familiar_kayos_nox.anm2" tags="cansacrifice" />
+	<entity id="3" variant="452" name="Creeper Familiar" shadowSize="11" friction="1" anm2path="familiars/familiar_creeper.anm2" tags="cansacrifice" />
+
+
+
+	<!-- Pickups -->
+
+	<entity id="5" variant="30" subtype="500" name="Handcuffs Key" anm2path="pickup_handcuffs_key.anm2" friction="1" numGridCollisionPoints="24" collisionMass="3" collisionRadius="12" 
+		shadowSize="16">
+        <preload-snd id="8"/>
+    </entity>
+
+
+	<!-- Cards -->
+
+	<entity id="5" variant="300" subtype="500" name="Expired Lottery Ticket" anm2path="card_expired_lottery_ticket.anm2" friction="1" numGridCollisionPoints="24" collisionMass="3" collisionRadius="12" 
+		shadowSize="18">
+        <preload-snd id="8"/>
+    </entity>
+
+
+	<!-- Tears -->
+ 
+  <entity id="2" variant="450" subtype="100" name="Choco Waffles Tear" anm2path="choco_waffles_sprites.anm2" 
+		friction="0" collisionRadius="0"/>
+</entities>
