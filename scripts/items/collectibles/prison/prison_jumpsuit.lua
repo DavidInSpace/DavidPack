@@ -57,8 +57,7 @@ local function startFrocedPrisonJumpsuitPickupSquence()
 	forcedPrisonJumpsuitPickupSequence = true
 end
 
-
-function david_pack:prisonJumpsuitEntitySpawn(entityType, variant, subtype)
+david_pack:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, function (_, entityType, variant, subtype)
 	level = Game():GetLevel()
 	dimension = level:GetDimension()
 
@@ -69,7 +68,7 @@ function david_pack:prisonJumpsuitEntitySpawn(entityType, variant, subtype)
 	if entityType == 5 and variant == 100 and subtype == david_pack.Collectible.PRISON_JUMPSUIT then
 		startFrocedPrisonJumpsuitPickupSquence()
 	end
-end
+end)
 
 local function endPrisonJumpsuitSequence()
 	forcedPrisonJumpsuitPickupSequence = false
@@ -178,4 +177,3 @@ end
 david_pack:AddCallback(ModCallbacks.MC_POST_PICKUP_SELECTION, david_pack.prisonJumpsuitPickupSelection)
 david_pack:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, david_pack.resetPrisonJumpsuit)
 david_pack:AddCallback(ModCallbacks.MC_POST_ADD_COLLECTIBLE, david_pack.prisonJumpsuitPickup)
-david_pack:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, david_pack.prisonJumpsuitEntitySpawn)

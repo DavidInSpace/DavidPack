@@ -136,7 +136,22 @@ weird mirror from TBOI otherside
 not working
 ]])
 
-DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.1.0", [[
+DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.0.3", [[
+{{FSIZE3}} Additions:
+- If a super curse is active on a floor
+2 random items will spawn in the starting
+room of the floor to help Isaac progress
+
+{{FSIZE3}} Fixes:
+- Fixed Curse Of Unfathomable keeping
+all HUD's hidden even after going
+to the next floor
+- Fixed bug reported in bugs & issues by Kryzpo
+]])
+
+
+
+--[[DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.1.0", [[
 {{FSIZE3}} Additions:
 - Added a custom challenge "Imprisoned"
 
@@ -158,5 +173,5 @@ Isaacs speed to 0.1
 instead of 10% when handcuffs are locked
 - Fixed handcuffs indicator not updating
 when restarting a run
-]])
+)]]
 

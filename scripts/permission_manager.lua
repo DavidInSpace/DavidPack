@@ -192,32 +192,14 @@ function david_pack:preventReroll()
     end
 end
 
-function david_pack:preventPause(_, inputHook, buttonAction)
-    if not david_pack.actionsPermission.canPause and buttonAction == ButtonAction.ACTION_PAUSE then
-        return returnInputHook(inputHook)
-    end
-end
-
 function david_pack:preventDamage()
     if not david_pack.actionsPermission.canTakeDamage then
         return false
     end
 end
 
-function david_pack:preventOpenConsole(_, inputHook, buttonAction)
-    if not david_pack.actionsPermission.canOpenConsole and buttonAction == ButtonAction.ACTION_CONSOLE then
-        return returnInputHook(inputHook)
-    end
-end
-
 function david_pack:preventToggleFullscreen(_, inputHook, buttonAction)
     if not david_pack.actionsPermission.canToggleFullscreen and buttonAction == ButtonAction.ACTION_FULLSCREEN then
-        return returnInputHook(inputHook)
-    end
-end
-
-function david_pack:preventMap(_, inputHook, buttonAction)
-    if not david_pack.actionsPermission.canMap and buttonAction == ButtonAction.ACTION_MAP then
         return returnInputHook(inputHook)
     end
 end
@@ -254,11 +236,8 @@ david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventMoving)
 david_pack:AddCallback(ModCallbacks.MC_PRE_GRID_ENTITY_DOOR_UPDATE, david_pack.preventRoomExit)
 david_pack:AddCallback(ModCallbacks.MC_PRE_GRID_ENTITY_TRAPDOOR_UPDATE, david_pack.preventTrapdoorEnter)
 david_pack:AddCallback(ModCallbacks.MC_PRE_PICKUP_MORPH, david_pack.preventReroll)
-david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventPause)
 david_pack:AddCallback(ModCallbacks.MC_PRE_PLAYER_TAKE_DMG, david_pack.preventDamage)
-david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventOpenConsole)
 david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventToggleFullscreen)
-david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventMap)
 david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventRestart)
 david_pack:AddCallback(ModCallbacks.MC_PRE_EFFECT_RENDER, david_pack.preventCreepSpawn)
 

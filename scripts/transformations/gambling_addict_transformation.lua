@@ -1,4 +1,6 @@
-function david_pack:gamblingAddictTransformationAdd(item, _, firsttime, _, _, player)
+
+
+david_pack:AddCallback(ModCallbacks.MC_POST_ADD_COLLECTIBLE, function (_, item, _, firsttime, _, _, player)
     --if not firsttime then return end
 
     if
@@ -19,9 +21,9 @@ function david_pack:gamblingAddictTransformationAdd(item, _, firsttime, _, _, pl
             playerEffects:AddNullEffect(david_pack.NullItem.GAMBLING_ADDICT_TRANSFORMATION)
         end
     end
-end
+end)
 
-function david_pack:teleportToGamblingRoom(_, _, isPostLevelInitFinished)
+david_pack:AddCallback(ModCallbacks.MC_POST_PLAYER_NEW_LEVEL, function (_, _, _, isPostLevelInitFinished)
     local player = Isaac.GetPlayer()
     if isPostLevelInitFinished == false then return end
     if Game():GetLevel():GetDimension() ~= Dimension.NORMAL then return end
@@ -37,8 +39,4 @@ function david_pack:teleportToGamblingRoom(_, _, isPostLevelInitFinished)
             end
         end
     end
-end
-
-
-david_pack:AddCallback(ModCallbacks.MC_POST_PLAYER_NEW_LEVEL, david_pack.teleportToGamblingRoom)
-david_pack:AddCallback(ModCallbacks.MC_POST_ADD_COLLECTIBLE, david_pack.gamblingAddictTransformationAdd)
+end, david_pack.teleportToGamblingRoom)

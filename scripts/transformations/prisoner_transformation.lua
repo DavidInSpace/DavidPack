@@ -1,8 +1,7 @@
 
 ---@param player EntityPlayer
-function david_pack:prisonerTransformationAdd(item, _, firsttime, _, _, player)
+david_pack:AddCallback(ModCallbacks.MC_POST_ADD_COLLECTIBLE, function (_, item, _, firsttime, _, _, player)
 	--if not firsttime then return end
-
 	if
 		item == david_pack.Collectible.PRISON_JUMPSUIT or item == david_pack.Collectible.HANDCUFFS
 	then
@@ -18,7 +17,6 @@ function david_pack:prisonerTransformationAdd(item, _, firsttime, _, _, player)
 			end
 		end
 	end
-end
+end)
 
 
-david_pack:AddCallback(ModCallbacks.MC_POST_ADD_COLLECTIBLE, david_pack.prisonerTransformationAdd)

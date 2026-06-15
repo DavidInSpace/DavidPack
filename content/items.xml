@@ -46,9 +46,9 @@
     <trinket name="Bloody Blindfold" id="1" gfx="BloodyBlindfold.png" description="cant see" cache="" />
     <trinket name="Active Worm" id="2" gfx="ActiveWorm.png" description="WOO" cache="damage shotspeed" />
 
-    <trinket name="Pink Neon Countdown" id="3" gfx="PinkNeonCountdown3.png" description="1 2 3" cache="" />
-    <trinket name="Orange Neon Countdown" id="4" gfx="OrangeNeonCountdown3.png" description="1 2 3" cache="" />
-    <trinket name="Pink Neon Countdown" id="5" gfx="RGBCountdown3.png" description="1 2 3" cache="" />
+    <!-- <trinket name="Pink Countdown" id="3" gfx="PinkNeonCountdown3.png" description="1 2 3" cache="" />
+    <trinket name="Orange Countdown" id="4" gfx="OrangeNeonCountdown3.png" description="1 2 3" cache="" />
+    <trinket name="RGB Countdown" id="5" gfx="RGBCountdown3.png" description="1 2 3" cache="" />-->
 
     <!-- Null Items -->
 

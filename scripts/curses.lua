@@ -94,11 +94,9 @@ mod:AddCallback(ModCallbacks.MC_POST_CURSE_EVAL,
 
 
 local function spawnItems()
-    print("Spawning items")
+    --print("Spawning items")
     Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, mod:getCollectibleFromRandomPool(false),
         Game():GetRoom():GetCenterPos() - Vector(-200, 300), Vector.Zero, nil)
-    Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, mod:getCollectibleFromRandomPool(false),
-        Game():GetRoom():GetCenterPos() - Vector(0, 300), Vector.Zero, nil)
     Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, mod:getCollectibleFromRandomPool(false),
         Game():GetRoom():GetCenterPos() - Vector(200, 300), Vector.Zero, nil)
 end
@@ -108,7 +106,7 @@ mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, function()
     local curses = Game():GetLevel():GetCurses()
     if (curses & mod.LevelCurse.CURSE_OF_ABSOLUTE_DISORIENTATION > 0) or (curses & mod.LevelCurse.CURSE_OF_BLACKOUT > 0) or (curses & mod.LevelCurse.CURSE_OF_THE_CATACOMB > 0) or (curses & mod.LevelCurse.CURSE_OF_UNFATHOMABLE > 0) or (curses & mod.LevelCurse.CURSE_OF_UNPREDICTABILITY > 0) or (curses & mod.LevelCurse.CURSE_OF_VISIONLESS > 0) then
         spawnItems()
-        print("super curse detected")
+        --print("super curse detected")
     end
 end)
 
@@ -206,7 +204,6 @@ mod:AddCallback(ModCallbacks.MC_PRE_GRID_ENTITY_DOOR_RENDER, function()
     end
 end)
 
-
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, function()
     if (Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_ABSOLUTE_DISORIENTATION > 0) then
         local room = Game():GetRoom()
@@ -234,6 +231,10 @@ mod:AddCallback(ModCallbacks.MC_POST_ROOM_TRIGGER_CLEAR, function()
     if Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_UNFATHOMABLE > 0 then
         Game():GetHUD():SetVisible(false)
     end
+end)
+
+mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, function ()
+   Game():GetHUD():SetVisible(true) 
 end)
 
 ----> Curse Of Unfathomable <----

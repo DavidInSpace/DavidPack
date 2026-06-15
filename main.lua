@@ -60,6 +60,9 @@ include("scripts.items.collectibles.creeper")
 -- Trinkets --
 include("scripts.items.trinkets.blindfold")
 include("scripts.items.trinkets.active_worm")
+--include("scripts.items.trinkets.orange_countdown")
+--include("scripts.items.trinkets.pink_countdown")
+--include("scripts.items.trinkets.rgb_countdown")
 
 -- Cards --
 include("scripts.items.pickups.cards.expired_lottery_ticket")

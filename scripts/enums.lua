@@ -68,6 +68,9 @@ david_pack.Trinket = {
 	--X = Isaac.GetTrinketIdByName("x"),
 	BLINDFOLD = Isaac.GetTrinketIdByName("Bloody Blindfold"),
 	ACTIVE_WORM = Isaac.GetTrinketIdByName("Active Worm"),
+	ORANGE_COUNTDOWN = Isaac.GetTrinketIdByName("Orange Countdown"),
+	PINK_COUNTDOWN = Isaac.GetTrinketIdByName("Pink Countdown"),
+	RGB_COUNTDOWN = Isaac.GetTrinketIdByName("RGB Countdown"),
 }
 
 david_pack.NullItem = {
