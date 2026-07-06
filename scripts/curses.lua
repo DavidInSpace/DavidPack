@@ -11,41 +11,43 @@ curseSprite:Load("gfx/ui/super_curse_icons.anm2", true)
 curseSprite:Play("Blackout", true)
 
 --print("Update Icons")
-MinimapAPI:AddMapFlag("curse_of_blackout",
-    function()
-        return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_BLACKOUT > 0
-    end,
-    curseSprite, "Blackout", 1)
+if MinimapAPI then
+    MinimapAPI:AddMapFlag("curse_of_blackout",
+        function()
+            return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_BLACKOUT > 0
+        end,
+        curseSprite, "Blackout", 1)
 
-MinimapAPI:AddMapFlag("curse_of_the_catacomb",
-    function()
-        return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_THE_CATACOMB > 0
-    end,
-    curseSprite, "Catacomb", 1)
+    MinimapAPI:AddMapFlag("curse_of_the_catacomb",
+        function()
+            return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_THE_CATACOMB > 0
+        end,
+        curseSprite, "Catacomb", 1)
 
-MinimapAPI:AddMapFlag("curse_of_absolute_disorientation",
-    function()
-        return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_ABSOLUTE_DISORIENTATION > 0
-    end,
-    curseSprite, "AbsoluteDisorientation", 1)
+    MinimapAPI:AddMapFlag("curse_of_absolute_disorientation",
+        function()
+            return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_ABSOLUTE_DISORIENTATION > 0
+        end,
+        curseSprite, "AbsoluteDisorientation", 1)
 
-MinimapAPI:AddMapFlag("curse_of_unfathomable",
-    function()
-        return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_UNFATHOMABLE > 0
-    end,
-    curseSprite, "Unfathomable", 1)
+    MinimapAPI:AddMapFlag("curse_of_unfathomable",
+        function()
+            return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_UNFATHOMABLE > 0
+        end,
+        curseSprite, "Unfathomable", 1)
 
-MinimapAPI:AddMapFlag("curse_of_unpredictability",
-    function()
-        return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_UNPREDICTABILITY > 0
-    end,
-    curseSprite, "Unpredictability", 1)
+    MinimapAPI:AddMapFlag("curse_of_unpredictability",
+        function()
+            return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_UNPREDICTABILITY > 0
+        end,
+        curseSprite, "Unpredictability", 1)
 
-MinimapAPI:AddMapFlag("curse_of_visionless",
-    function()
-        return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_VISIONLESS > 0
-    end,
-    curseSprite, "Visionless", 1)
+    MinimapAPI:AddMapFlag("curse_of_visionless",
+        function()
+            return Game():GetLevel():GetCurses() & mod.LevelCurse.CURSE_OF_VISIONLESS > 0
+        end,
+        curseSprite, "Visionless", 1)
+end
 
 mod:AddCallback(ModCallbacks.MC_POST_CURSE_EVAL,
     function(_, curses)
@@ -53,8 +55,9 @@ mod:AddCallback(ModCallbacks.MC_POST_CURSE_EVAL,
         local tryReplaceCurse = mod.SaveManager.GetSettingsSave().super_curses or 1
         if tryReplaceCurse == 1 then
             local chance = math.random(1, 100)
+            print("Curse Chance: ", chance)
             local curseReplacementChance = mod.SaveManager.GetSettingsSave().super_curses_chance or 10
-            if chance <= curseReplacementChance then
+            if chance <= curseReplacementChance and Game():GetLevel():GetStageType() ~= StageType.STAGETYPE_ORIGINAL or Game():GetLevel():GetStageType() ~= StageType.STAGETYPE_AFTERBIRTH and Game():GetLevel():GetStage() ~= LevelStage.STAGE1_1 then
                 --print("Replace Curse With Super Curse")
                 --print(mod.LevelCurse.CURSE_OF_ABSOLUTE_DISORIENTATION, mod.LevelCurse.CURSE_OF_BLACKOUT, mod.LevelCurse.CURSE_OF_THE_CATACOMB)
 
@@ -233,8 +236,8 @@ mod:AddCallback(ModCallbacks.MC_POST_ROOM_TRIGGER_CLEAR, function()
     end
 end)
 
-mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, function ()
-   Game():GetHUD():SetVisible(true) 
+mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, function()
+    Game():GetHUD():SetVisible(true)
 end)
 
 ----> Curse Of Unfathomable <----

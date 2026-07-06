@@ -149,6 +149,14 @@ to the next floor
 - Fixed bug reported in bugs & issues by Kryzpo
 ]])
 
+DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.0.4", [[
+{{FSIZE3}} Fixes:
+- Fixed a bug that made the mod 
+error if MinimapAPI is not installed
+- Fixed Isaac not able to shoot up
+or down after overbent spoon gets rerolled
+in Isaac's inventory (eg. t.eden or D4)
+]])
 
 
 --[[DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.1.0", [[

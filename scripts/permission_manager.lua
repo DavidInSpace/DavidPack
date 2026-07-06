@@ -33,6 +33,7 @@ local function returnInputHook(inputHook)
 end
 
 
+
 function david_pack:preventActiveItemUse()
     if not david_pack.actionsPermission.canUseActiveItem then
         return 99999
@@ -204,11 +205,6 @@ function david_pack:preventToggleFullscreen(_, inputHook, buttonAction)
     end
 end
 
-function david_pack:preventRestart(_, inputHook, buttonAction)
-    if not david_pack.actionsPermission.canRestart and buttonAction == ButtonAction.ACTION_RESTART then
-        return returnInputHook(inputHook)
-    end
-end
 
 function david_pack:preventCreepSpawn(effect) -- only applies to player creep
     --print("EFFECT: ", effect.Variant, david_pack.actionsPermission.canLeaveCreep)
@@ -238,7 +234,6 @@ david_pack:AddCallback(ModCallbacks.MC_PRE_GRID_ENTITY_TRAPDOOR_UPDATE, david_pa
 david_pack:AddCallback(ModCallbacks.MC_PRE_PICKUP_MORPH, david_pack.preventReroll)
 david_pack:AddCallback(ModCallbacks.MC_PRE_PLAYER_TAKE_DMG, david_pack.preventDamage)
 david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventToggleFullscreen)
-david_pack:AddCallback(ModCallbacks.MC_INPUT_ACTION, david_pack.preventRestart)
 david_pack:AddCallback(ModCallbacks.MC_PRE_EFFECT_RENDER, david_pack.preventCreepSpawn)
 
 david_pack:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, david_pack.resetActionsPermission)

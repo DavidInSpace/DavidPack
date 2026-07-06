@@ -1,11 +1,24 @@
-local mod = {}
+local mod = david_pack
+local sfx = SFXManager()
 
-local COUNT_DOWN_STATES = {
-    "gfx/items/trinkets/PinkNeonCountdown0.png",
-    "gfx/items/trinkets/PinkNeonCountdown1.png",
-    "gfx/items/trinkets/PinkNeonCountdown2.png",
-    "gfx/items/trinkets/PinkNeonCountdown3.png",
-}
+
+---@param player EntityPlayer
+mod:AddCallback(ModCallbacks.MC_PRE_PLAYERHUD_TRINKET_RENDER, function(_, slot, position, scale, player, cropOffset)
+    if player:HasTrinket(mod.Trinket.PINK_COUNTDOWN) then
+        local runSave = mod.SaveManager.GetRunSave()
+        if runSave.pink_countdown_number == 0 then
+            return { CropOffset = Vector(96, 0) }
+        elseif runSave.pink_countdown_number == 1 then
+            return { CropOffset = Vector(64, 0) }
+        elseif runSave.pink_countdown_number == 2 then
+            return { CropOffset = Vector(32, 0) }
+        elseif runSave.pink_countdown_number == 3 then
+            return { CropOffset = Vector(0, 0) }
+        end
+    elseif not player:HasTrinket(TrinketType.TRINKET_MONKEY_PAW) and not player:HasTrinket(mod.Trinket.PINK_COUNTDOWN) and not player:HasTrinket(mod.Trinket.ORANGE_COUNTDOWN) and not player:HasTrinket(mod.Trinket.RGB_COUNTDOWN) then
+        return { CropOffset = Vector(0, 0) }
+    end
+end)
 
 
 ---@param entity Entity
@@ -17,29 +30,17 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, entity, damage, dam
     runSave.pink_countdown_number = runSave.pink_countdown_number or 3
     runSave.pink_countdown_number = runSave.pink_countdown_number - 1
 
-    if runSave.pink_countdown_number == 3 then
-        print("3 sprite")
-        Isaac.GetItemConfig():GetTrinket(mod.Trinket.PINK_COUNTDOWN).GfxFileName = COUNT_DOWN_STATES[4]
-    elseif runSave.pink_countdown_number == 2 then
-        print("2 sprite")
-        Isaac.GetItemConfig():GetTrinket(mod.Trinket.PINK_COUNTDOWN).GfxFileName = COUNT_DOWN_STATES[3]
-    elseif runSave.pink_countdown_number == 1 then
-        print("1 sprite")
-        Isaac.GetItemConfig():GetTrinket(mod.Trinket.PINK_COUNTDOWN).GfxFileName = COUNT_DOWN_STATES[2]
-    elseif runSave.pink_countdown_number == 0 then
-        print("0 sprite")
-        Isaac.GetItemConfig():GetTrinket(mod.Trinket.PINK_COUNTDOWN).GfxFileName = COUNT_DOWN_STATES[1]
-    elseif runSave.pink_countdown_number < 0 then
-        Isaac.GetItemConfig():GetTrinket(mod.Trinket.PINK_COUNTDOWN).GfxFileName = COUNT_DOWN_STATES[4]
+    if runSave.pink_countdown_number < 0 then
         runSave.pink_countdown_number = 3
     end
+
     print("damaged", runSave.pink_countdown_number)
 end, EntityType.ENTITY_PLAYER)
 
 ---@param player EntityPlayer
 mod:AddCallback(ModCallbacks.MC_POST_TRIGGER_TRINKET_ADDED, function(_, player, trinketType, firstTime)
+    print(mod.SaveManager.GetRunSave().pink_countdown_number)
     mod.SaveManager.GetRunSave().pink_countdown_number = 3
-    Isaac.GetItemConfig():GetTrinket(mod.Trinket.PINK_COUNTDOWN).GfxFileName = COUNT_DOWN_STATES[4]
 end, mod.Trinket.PINK_COUNTDOWN)
 
 ---@param player EntityPlayer

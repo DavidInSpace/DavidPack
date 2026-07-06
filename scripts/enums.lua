@@ -60,8 +60,9 @@ david_pack.Collectible = {
 
 	ACTIVE_MATTMAN = Isaac.GetItemIdByName("Active Mattman"),
 
-	CREEPER = Isaac.GetItemIdByName("Creeper")
+	DAVIDS_TODO_LIST = Isaac.GetItemIdByName("Davids Todo List"),
 
+	CREEPER = Isaac.GetItemIdByName("Creeper")
 }
 
 david_pack.Trinket = {
@@ -115,6 +116,7 @@ david_pack.Card = {
 david_pack.Effect = {
 	--X = Isaac.GetEntityVariantByName("x"),
 	GAMBLING_BUTTON = Isaac.GetEntityVariantByName("Gambling Button"),
+	TODO_LIST_BUTTON = Isaac.GetEntityVariantByName("Todo List Button"),
 	CHOCO_WAFFLES_ICON = Isaac.GetEntityVariantByName("Choco Waffles Icon"),
 }
 
@@ -146,6 +148,14 @@ david_pack.LevelCurse = {
 	CURSE_OF_UNPREDICTABILITY = 1 << (Isaac.GetCurseIdByName("Curse of the Unpredictability!") - 1),
 	CURSE_OF_VISIONLESS = 1 << (Isaac.GetCurseIdByName("Curse of the Visionless!") - 1)
 }
+
+
+
+david_pack.Value = {
+	KEYED_ENTITIES_CHANCE = 50,
+}
+
+
 
 
 

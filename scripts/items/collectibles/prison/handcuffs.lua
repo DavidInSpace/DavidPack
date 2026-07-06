@@ -51,12 +51,12 @@ end, david_pack.Collectible.HANDCUFFS)
 
 ---@param entity Entity
 ---@param collider Entity
-function david_pack:lockHandcuffs(entity, collider)
+david_pack:AddCallback(ModCallbacks.MC_POST_PLAYER_COLLISION, function (_, entity, collider)
     --print("Lock Handcuffs: ", entity.Type, source.Entity:GetData().keyedEffect)
     if entity ~= nil and entity.Type == EntityType.ENTITY_PLAYER and collider:GetData().keyedEffect == true and entity:ToPlayer():HasCollectible(david_pack.Collectible.HANDCUFFS) then
         changeHandcuffsState(true)
     end
-end
+end)
 
 ---@param npc EntityNPC
 function david_pack:dropHandcuffsKey(npc)
@@ -78,6 +78,8 @@ function david_pack:dropHandcuffsKey(npc)
     end
 end
 
+
+
 david_pack:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, function(_, entityType, variant, subType)
     local player = Isaac.GetPlayer()
     if entityType == 1000 or entityType == 999 or entityType == 17 or entityType < 10 or not player:HasCollectible(david_pack.Collectible.HANDCUFFS) then return end
@@ -87,8 +89,8 @@ david_pack:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, function(_, entityType,
 
     if entity ~= nil then
         if entity:IsActiveEnemy(false) and entity.CollisionDamage > 0 then
-            local chance = math.random(1, 10)
-            if chance <= 5 then
+            local chance = math.random(1, 100)
+            if chance <= 50 then
                 table.insert(keyedRoomEntities, entity)
                 entity.CollisionDamage = 0.25
                 entity.Mass = entity.Mass * 3
@@ -172,6 +174,6 @@ david_pack:AddCallback(ModCallbacks.MC_PRE_NEW_ROOM, function()
     end
 end, david_pack.resetKeyedRoomEntitiesTable)
 
-david_pack:AddCallback(ModCallbacks.MC_POST_PLAYER_COLLISION, david_pack.lockHandcuffs)
+
 david_pack:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, david_pack.dropHandcuffsKey)
 david_pack:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, david_pack.onNPCRender)

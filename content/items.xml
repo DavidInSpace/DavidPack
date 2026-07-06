@@ -4,41 +4,42 @@
 
     <passive name="Risk Of Gambling" id="1" gfx="RiskOfGambling.png" description="High Risk Big Reward" quality="4" devilprice="2" cache="" tags="lazarussharedglobal" />
 
-    <active name="Powerful Coinflip" id="3" gfx="coinflips/PowerfulCoinflip.png" description="Strength or Weakness" quality="2" chargetype="special" maxcharges="12" cache="" tags="offensive" />
-    <active name="Miserable Coinflip" id="4" gfx="coinflips/MiserableCoinflip.png" description="Sadness or Joy" quality="2" chargetype="special" maxcharges="12" cache="" tags="offensive" />
-    <active name="Blessed Coinflip" id="5" gfx="coinflips/BlessedCoinflip.png" description="Lucky or Luckles " quality="1" chargetype="special" maxcharges="12" cache="" tags="" />
+    <active name="Powerful Coinflip" id="2" gfx="coinflips/PowerfulCoinflip.png" description="Strength or Weakness" quality="2" chargetype="special" maxcharges="12" cache="" tags="offensive" />
+    <active name="Miserable Coinflip" id="3" gfx="coinflips/MiserableCoinflip.png" description="Sadness or Joy" quality="2" chargetype="special" maxcharges="12" cache="" tags="offensive" />
+    <active name="Blessed Coinflip" id="4" gfx="coinflips/BlessedCoinflip.png" description="Lucky or Luckles " quality="1" chargetype="special" maxcharges="12" cache="" tags="" />
     <active name="Swift Coinflip" id="5" gfx="coinflips/SwiftCoinflip.png" description="Quick or Slow" quality="1" chargetype="special" maxcharges="12" cache="" tags="" />
 
     <passive name="Prison Jumpsuit" id="6" gfx="PrisonJumpsuit.png" description="Regular Prison Jumpsuit" quality="0" maxhearts="-2" damagemult="0.7" tearsmult="0.7" cache="damage firedelay speed range shotspeed" tags="" />
-    <passive name="Dirty Prison Jumpsuit" id="27" gfx="DirtyPrisonJumpsuit.png" description="Filthy Prison Jumpsuit" quality="0" soulhearts="2" maxhearts="-4" damagemult="0.6" tearsmult="0.6" cache="damage firedelay speed range shotspeed" tags="" />
-    <passive name="Handcuffs" id="7" gfx="Handcuffs.png" description="Handcuffed" quality="0" cache="" tags="" />
+    <passive name="Dirty Prison Jumpsuit" id="7" gfx="DirtyPrisonJumpsuit.png" description="Filthy Prison Jumpsuit" quality="0" soulhearts="2" maxhearts="-4" damagemult="0.6" tearsmult="0.6" cache="damage firedelay speed range shotspeed" tags="" />
+    <passive name="Handcuffs" id="8" gfx="Handcuffs.png" description="Handcuffed" quality="0" cache="" tags="" />
     <passive name="Leg Shackles" id="9" gfx="LegShackles.png" description="Oooww..." hidden="true" quality="0" cache="speed" tags="" />
 
-    <active name="Torn Death Certificate" id="11" gfx="TornDeathCertificate.png" description="Maybe I know where I am?" quality="3" cache="" tags="nogreed"/>
-    <active name="Medical Certificate" id="12" gfx="MedicalCertificate.png" description="" quality="1" cache="" tags="nogreed"/>
-    <active name="Rune Certificate" id="13" gfx="RuneCertificate.png" description="" quality="3" cache="" tags="nogreed"/>
+    <active name="Torn Death Certificate" id="10" gfx="TornDeathCertificate.png" description="Maybe I know where I am?" quality="3" cache="" tags="nogreed"/>
+    <active name="Medical Certificate" id="11" gfx="MedicalCertificate.png" description="" quality="1" cache="" tags="nogreed"/>
+    <active name="Rune Certificate" id="12" gfx="RuneCertificate.png" description="" quality="3" cache="" tags="nogreed"/>
 
-    <active name="Mixed Emotions" id="14" gfx="mixed_emotions.png" description=":) D: :3 :( :D :p " quality="5" chargetype="timed" maxcharges="20" cache="" tags="offensive" />
+    <active name="Mixed Emotions" id="13" gfx="mixed_emotions.png" description=":) D: :3 :( :D :p " quality="5" chargetype="timed" maxcharges="20" cache="" tags="offensive" />
 
-    <passive name="The Overcharged Battery" id="15" gfx="OverchargedBattery.png" description="Stores Too Much Energy" quality="4" cache="" tags="" />
-    <familiar name="Overcharged Baby" id="16" gfx="OverchargedBaby.png" description="Not Implemented Yet" quality="4" cache="familiars" tags="" />
-    <familiar name="Kayos_Nox" id="17" gfx="KayosNox.png" description="Just An Other French Fox" quality="3" tags="baby summonable monstermanual offensive"/>
-    <active name="Chocolate Waffles" id="18" gfx="ChocolateWaffles.png" description="Can I Have Chocolate Waffles?" hidden="true" quality="2" chargetype="timed" maxcharges="1200" cache="" tags=""/>
+    <passive name="The Overcharged Battery" id="14" gfx="OverchargedBattery.png" description="Stores Too Much Energy" quality="4" cache="" tags="" />
+    <familiar name="Overcharged Baby" id="15" gfx="OverchargedBaby.png" description="Not Implemented Yet" quality="4" cache="familiars" tags="" />
+    <familiar name="Kayos_Nox" id="16" gfx="KayosNox.png" description="Just An Other French Fox" quality="3" tags="baby summonable monstermanual offensive"/>
+    <active name="Chocolate Waffles" id="17" gfx="ChocolateWaffles.png" description="Can I Have Chocolate Waffles?" hidden="true" quality="2" chargetype="timed" maxcharges="1200" cache="" tags=""/>
 
-    <active name="Broken Monitor" id="19" gfx="BrokenMonitor.png" description="Smashed" quality="4" chargetype="special" maxcharges="20" cache="" tags=""/>
-    <passive name="Broken Monitor Passive" id="20" gfx="BrokenMonitor.png" description="Smashed" hidden="true" quality="4" cache="" tags="lazarussharedglobal"/>
-    <active name="Blue Screen" id="21" gfx="BlueScreen.png" description="ERROR" quality="3" chargetype="special" maxcharges="20" cache="" tags=""/>
-    <passive name="Bouncy DVD Logo" id="23" gfx="BouncyDVDLogo.png" description="Will it hit the corner?" hidden="true" quality="3" cache="" tags=""/>
+    <active name="Broken Monitor" id="18" gfx="BrokenMonitor.png" description="Smashed" quality="4" chargetype="special" maxcharges="20" cache="" tags=""/>
+    <passive name="Broken Monitor Passive" id="19" gfx="BrokenMonitor.png" description="Smashed" hidden="true" quality="4" cache="" tags="lazarussharedglobal"/>
+    <active name="Blue Screen" id="20" gfx="BlueScreen.png" description="ERROR" quality="3" chargetype="special" maxcharges="20" cache="" tags=""/>
+    <passive name="Bouncy DVD Logo" id="21" gfx="BouncyDVDLogo.png" description="Will it hit the corner?" hidden="true" quality="3" cache="" tags=""/>
     
     <passive name="A Bit Of Chaos" id="22" gfx="ABitOfChaos.png" description="Soahc" quality="2" cache="" tags=""/>
    
-    <passive name="Overbent Spoon" id="24" gfx="OverbentSpoon.png" description="oops" quality="2" range="300" cache="" tags=""/> <!--100 range here = 2.5 range in game-->
-    <passive name="Point Of No Return" id="25" gfx="PointOfNoReturn.png" description="" quality="2" hidden="true" cache="" tags=""/>
-    <active name="Glowing Hourglass Cookie" id="26" gfx="GlowingHourglassCookie.png" description="Rewind" hidden="true" quality="1" cache="" tags=""/>
+    <passive name="Overbent Spoon" id="23" gfx="OverbentSpoon.png" description="oops" quality="2" range="300" cache="" tags=""/> <!--100 range here = 2.5 range in game-->
+    <passive name="Point Of No Return" id="24" gfx="PointOfNoReturn.png" description="" quality="2" hidden="true" cache="" tags=""/>
+    <active name="Glowing Hourglass Cookie" id="25" gfx="GlowingHourglassCookie.png" description="Rewind" hidden="true" quality="1" cache="" tags=""/>
     <active name="Active Mattman" id="26" gfx="ActiveMattman.png" description="Active Mattman Does Exist" hidden="true" quality="4" cache="familiars" tags=""/>
     <!--Obtained by dropping the lazy worm trinket and active worm trinket in a room containing a battery-->
 
-    <passive name="Davids Todo List" id="27" gfx="DavidsTodoList.png" description="what is there to do" hidden="true" quality="2" cache="" tags=""/>
+    <passive name="Davids Todo List" id="27" gfx="DavidsTodoList.png" description="what is there to do" quality="2" cache="" tags=""/>
+    
     <familiar name="Creeper" id="28" gfx="Creeper.png" description="Psss... BOOM!" quality="1" tags="baby summonable monstermanual offensive"/>
 
     <!-- Trinkets -->
@@ -46,9 +47,9 @@
     <trinket name="Bloody Blindfold" id="1" gfx="BloodyBlindfold.png" description="cant see" cache="" />
     <trinket name="Active Worm" id="2" gfx="ActiveWorm.png" description="WOO" cache="damage shotspeed" />
 
-    <!-- <trinket name="Pink Countdown" id="3" gfx="PinkNeonCountdown3.png" description="1 2 3" cache="" />
-    <trinket name="Orange Countdown" id="4" gfx="OrangeNeonCountdown3.png" description="1 2 3" cache="" />
-    <trinket name="RGB Countdown" id="5" gfx="RGBCountdown3.png" description="1 2 3" cache="" />-->
+    <!--<trinket name="Pink Countdown" id="3" gfx="PinkCountdown.png" description="1 2 3" cache="" />
+    <trinket name="Orange Countdown" id="4" gfx="OrangeCountdown.png" description="1 2 3" cache="" />-->
+    <trinket name="RGB Countdown" id="5" gfx="RGBCountdown.png" description="1 2 3" cache="" />
 
     <!-- Null Items -->
 

@@ -4,7 +4,8 @@ david_pack = RegisterMod("David Pack", 1)
 
 -- Misc --
 include("scripts.enums")
-include("scripts.utils")
+include("scripts.utils.utils")
+include("scripts.utils.wait")
 include("scripts.eid")
 
 -- Dead Sea Scrolls --
@@ -55,6 +56,8 @@ include("scripts.items.collectibles.point_of_no_return")
 
 include("scripts.items.collectibles.a_bit_of_chaos")
 
+include("scripts.items.collectibles.davids_todo_list")
+
 include("scripts.items.collectibles.creeper")
 
 -- Trinkets --
@@ -62,7 +65,7 @@ include("scripts.items.trinkets.blindfold")
 include("scripts.items.trinkets.active_worm")
 --include("scripts.items.trinkets.orange_countdown")
 --include("scripts.items.trinkets.pink_countdown")
---include("scripts.items.trinkets.rgb_countdown")
+include("scripts.items.trinkets.rgb_countdown")
 
 -- Cards --
 include("scripts.items.pickups.cards.expired_lottery_ticket")

@@ -1,3 +1,4 @@
+local mod = david_pack
 local game = Game()
 local player = Isaac.GetPlayer()
 local sfx = SFXManager()
@@ -29,7 +30,7 @@ local function SpawnItem()
 
 	local room = Game():GetRoom()
 	sfx:Play(
-		david_pack.Sound.I_CANT_STOP_WINNING,
+		mod.Sound.I_CANT_STOP_WINNING,
 		1,
 		1,
 		false,
@@ -47,7 +48,7 @@ end
 
 -- TODO: add epic animation when pressing button and rolling
 local function Gamble(sprite)
-	if player:HasCollectible(david_pack.Collectible.RISK_OF_GAMBLING) then
+	if player:HasCollectible(mod.Collectible.RISK_OF_GAMBLING) then
 		local random = math.random(1, 100)
 
 		if random <= gambling_risk then
@@ -65,7 +66,7 @@ local function Gamble(sprite)
 						and CurrentItemConfig.Type ~= ItemType.ITEM_ACTIVE
 						and CurrentItemConfig.Type ~= ItemType.ITEM_NULL
 						and not CurrentItemConfig:HasTags(ItemConfig.TAG_QUEST)
-						and collectibleIDcount ~= david_pack.Collectible.RISK_OF_GAMBLING
+						and collectibleIDcount ~= mod.Collectible.RISK_OF_GAMBLING
 					then
 						player:RemoveCollectible(collectibleIDcount)
 					end
@@ -76,10 +77,10 @@ local function Gamble(sprite)
 					entity:Remove()
 				end
 			end
-			if david_pack.SaveManager.GetSettingsSave().shake == 1 then
+			if mod.SaveManager.GetSettingsSave().shake == 1 then
 				Game():ShakeScreen(10)
 			end
-			sfx:Play(david_pack.Sound.AW_DANG_IT, 1, 1, false, math.random(95, 105) / 100)
+			sfx:Play(mod.Sound.AW_DANG_IT, 1, 1, false, math.random(95, 105) / 100)
 		else
 			SpawnItem()
 		end
@@ -94,7 +95,7 @@ local function Gamble(sprite)
 
 		EID:addEntity(
 			1000,
-			david_pack.Effect.GAMBLING_BUTTON,
+			mod.Effect.GAMBLING_BUTTON,
 			100,
 			"Gambling Button",
 			"{{ColorYellow}}Gambling Risk: "
@@ -104,7 +105,7 @@ local function Gamble(sprite)
 	else
 		local room = game:GetRoom()
 		for _, entity in pairs(Isaac.GetRoomEntities()) do
-			if entity.Type == EntityType.ENTITY_EFFECT and entity.Variant == david_pack.Effect.GAMBLING_BUTTON and entity.SubType == 100 then
+			if entity.Type == EntityType.ENTITY_EFFECT and entity.Variant == mod.Effect.GAMBLING_BUTTON and entity.SubType == 100 then
 				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.BOMB_EXPLOSION, 0, entity.Position, Vector(0, 0), nil)
 				entity:Kill()
 				break
@@ -116,7 +117,7 @@ end
 local function SpawnRiskOfGamblingButton(isFirstTime)
 	EID:addEntity(
 		1000,
-		david_pack.Effect.GAMBLING_BUTTON,
+		mod.Effect.GAMBLING_BUTTON,
 		100,
 		"Gambling Button",
 		"{{ColorYellow}}Gambling Risk: "
@@ -129,32 +130,32 @@ local function SpawnRiskOfGamblingButton(isFirstTime)
 	if level:GetCurrentRoomIndex() == startingRoomIndex or (currentRoomDesc.Data.Name == "Starting Room" and currentRoomDesc.Data.StageID == 13 and currentRoomDesc.Data.Type == 1) then
 		local room = game:GetRoom()
 		local effectPos = room.GetCenterPos(room) + Vector(0, 80)
-		Isaac.Spawn(EntityType.ENTITY_EFFECT, david_pack.Effect.GAMBLING_BUTTON, 100, effectPos, Vector(0, 0), nil)
+		Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effect.GAMBLING_BUTTON, 100, effectPos, Vector(0, 0), nil)
 		if isFirstTime == true then
 			Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.POOF01, 0, effectPos, Vector(0, 0), nil)
 		end
 	end
 end
 
-function david_pack:onRiskOfGamblingPickup(Type, Charge, FirstTime, Slot, VarData)
-	if Type ~= david_pack.Collectible.RISK_OF_GAMBLING then
+function mod:onRiskOfGamblingPickup(Type, Charge, FirstTime, Slot, VarData)
+	if Type ~= mod.Collectible.RISK_OF_GAMBLING then
 		return
 	end
 	gambling_risk = 1
-	sfx:Play(david_pack.Sound.LETS_GO_GAMBLING, 1, 1, false, math.random(90, 100) / 100, 0)
+	sfx:Play(mod.Sound.LETS_GO_GAMBLING, 1, 1, false, math.random(90, 100) / 100, 0)
 	SpawnRiskOfGamblingButton()
 end
 
-david_pack:AddCallback(ModCallbacks.MC_PRE_ADD_COLLECTIBLE, david_pack.onRiskOfGamblingPickup)
+mod:AddCallback(ModCallbacks.MC_PRE_ADD_COLLECTIBLE, mod.onRiskOfGamblingPickup)
 
-david_pack:AddCallback(ModCallbacks.MC_POST_EFFECT_INIT, function(_, effect)
+mod:AddCallback(ModCallbacks.MC_POST_EFFECT_INIT, function(_, effect)
 	effect.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
 	effect.SortingLayer = SortingLayer.SORTING_BACKGROUND
-end, david_pack.Effect.GAMBLING_BUTTON)
+end, mod.Effect.GAMBLING_BUTTON)
 
 
 
-function david_pack:gamblingButtonToggle(effect)
+function mod:gamblingButtonToggle(effect)
 	local effectSpr = effect:GetSprite()
 	local room = game:GetRoom()
 
@@ -168,42 +169,42 @@ function david_pack:gamblingButtonToggle(effect)
 	end
 	if effectSpr:IsFinished("Switched") then
 		sfx:Play(SoundEffect.SOUND_BUTTON_PRESS)
-		room:GetEffects():AddCollectibleEffect(david_pack.Collectible.RISK_OF_GAMBLING)
+		room:GetEffects():AddCollectibleEffect(mod.Collectible.RISK_OF_GAMBLING)
 		effectSpr:Play("On")
 		Gamble(effectSpr)
 	end
 end
 
-david_pack:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, david_pack.gamblingButtonToggle,
-david_pack.Effect.GAMBLING_BUTTON)
+mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, mod.gamblingButtonToggle,
+mod.Effect.GAMBLING_BUTTON)
 
-david_pack:AddCallback(ModCallbacks.MC_PRE_EFFECT_RENDER, function(_, effect, offset)
+mod:AddCallback(ModCallbacks.MC_PRE_EFFECT_RENDER, function(_, effect, offset)
 	if game:GetRoom():GetRenderMode() == RenderMode.RENDER_WATER_REFLECT then
 		return false
 	end
-end, david_pack.Effect.GAMBLING_BUTTON)
+end, mod.Effect.GAMBLING_BUTTON)
 
-function david_pack:resetRiskOfGambling(continued)
+function mod:resetRiskOfGambling(continued)
 	if continued then
 	else
 		gambling_risk = 1
 	end
 end
 
-function david_pack.respawnGamblingButton()
+function mod.respawnGamblingButton()
 	player = Isaac.GetPlayer()
 	if selectStartingRoom == true then
 		selectStartingRoom = false
 		startingRoomIndex = level:GetCurrentRoomIndex()
 	end
 
-	if player:HasCollectible(david_pack.Collectible.RISK_OF_GAMBLING) then
+	if player:HasCollectible(mod.Collectible.RISK_OF_GAMBLING) then
 		print("Spawn Gambling Button")
 		SpawnRiskOfGamblingButton()
 	end
 end
 
-function david_pack.spawnGamblingButton(level, type)
+function mod.spawnGamblingButton(level, type)
 	level = Game():GetLevel()
 	selectStartingRoom = true
 
@@ -214,7 +215,7 @@ function david_pack.spawnGamblingButton(level, type)
 		gambling_risk = 0
 	else
 		player = Isaac.GetPlayer()
-		if player:HasCollectible(david_pack.Collectible.RISK_OF_GAMBLING) then
+		if player:HasCollectible(mod.Collectible.RISK_OF_GAMBLING) then
 			SpawnRiskOfGamblingButton(true)
 			local remove_value = math.floor(1 + (player.Luck / 2))
 			gambling_risk = gambling_risk - remove_value
@@ -225,5 +226,5 @@ function david_pack.spawnGamblingButton(level, type)
 	end
 end
 
-david_pack:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, david_pack.respawnGamblingButton)
-david_pack:AddCallback(ModCallbacks.MC_PRE_LEVEL_SELECT, david_pack.spawnGamblingButton)
+mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.respawnGamblingButton)
+mod:AddCallback(ModCallbacks.MC_PRE_LEVEL_SELECT, mod.spawnGamblingButton)

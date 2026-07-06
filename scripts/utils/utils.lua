@@ -1,12 +1,3 @@
-function david_pack:sleep(time) -- Not used anywhere
-	if time == nil then
-		return
-	end
-	local sec = tonumber(os.clock() + time)
-	while os.clock() < sec do
-	end
-end
-
 function david_pack:findEntity(type, variant, subtype) -- Passing in no arguments will return all entities in the room
 	if type ~= nil and variant ~= nil and subtype ~= nil then
 		for _, entity in pairs(Isaac.GetRoomEntities()) do
@@ -169,6 +160,8 @@ function david_pack:getCollectiblesOfEachQualityFromAllItemPoolsSortedByQuality(
 	end
 end
 
+---@param randomizeAlpha boolean
+---@param addAlpha number
 function david_pack:getRandomColor(randomizeAlpha, addAlpha)
 	if randomizeAlpha then
 		return Color(math.random(1, 100) / 100, math.random(1, 100) / 100, math.random(1, 100) / 100,
@@ -190,4 +183,27 @@ end
 
 function david_pack:getRandomVector(minX, maxX, minY, maxY)
 	return Vector(math.random(minX, maxX), math.random(minY, maxY))
+end
+
+
+local CACHE_FLAGS = {
+	CacheFlag.CACHE_DAMAGE,
+	CacheFlag.CACHE_FIREDELAY,
+	CacheFlag.CACHE_RANGE,
+	CacheFlag.CACHE_SHOTSPEED,
+	CacheFlag.CACHE_SPEED,
+	CacheFlag.CACHE_LUCK,
+	CacheFlag.CACHE_SIZE
+}
+
+function david_pack:addRandomCache(amount)
+	if amount == nil or amount <= 0 then return end
+
+
+
+	local player = Isaac.GetPlayer()
+	for i = 0, amount do
+		local flag_index = math.random(1, 7)
+		player:AddCacheFlags(CACHE_FLAGS[flag_index])
+	end
 end
