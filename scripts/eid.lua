@@ -15,7 +15,8 @@ if EID then
 	EID:setModIndicatorIcon("ModIcon")
 	-- Append Descriptions --
 
-	EID:AddSynergyConditional({david_pack.Collectible.OVERCHARGED_BABY}, CollectibleType.COLLECTIBLE_BFFS, "Time to trigger an effect is halved", "hellooooo")
+	EID:AddSynergyConditional({ david_pack.Collectible.OVERCHARGED_BABY }, CollectibleType.COLLECTIBLE_BFFS,
+		"Time to trigger an effect is halved", "hellooooo")
 
 	-- Icons --
 
@@ -64,7 +65,7 @@ if EID then
 		david_pack.Collectible.PRISON_JUMPSUIT,
 		"↓ 0.7x multiplier to all stats except shot speed#↑ +1.25 shot speed #{{EmptyHeart}} -1 Health#{{Warning}} Isaac is forced to put it on")
 
-EID:addCollectible(
+	EID:addCollectible(
 		david_pack.Collectible.DIRTY_PRISON_JUMPSUIT,
 		"↓ 0.6x multiplier to all stats except shot speed#↑ +2 shot speed #{{EmptyHeart}} -2 Health#{{RottenHeart}} All red hearts turn in to roten hearts#{{Warning}} Isaac is forced to put it on")
 
@@ -148,6 +149,9 @@ EID:addCollectible(
 
 	EID:addTrinket(david_pack.Trinket.ACTIVE_WORM,
 		"↑ +0.5 Shot Speed#↓ -0.5 Damage")
+
+	EID:addTrinket(david_pack.Trinket.RGB_COUNTDOWN,
+		"Counts down every 2 to 40 seconds looping back to 3 after hitting 0#Grants {{Damage}}, {{Luck}}, {{Range}} and size up based on how high the number is#When the number hits zero Isaacs stats will get reduced by 1#{{Warning}} Isaac can only drop this trinket if its currently 3")
 
 
 	-- Cards --

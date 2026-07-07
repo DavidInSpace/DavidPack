@@ -181,6 +181,10 @@ function david_pack:getRandomColorModifier(randomizeAlpha, addAlpha)
 	end
 end
 
+---@param minX number
+---@param maxX number
+---@param minY number
+---@param maxY number
 function david_pack:getRandomVector(minX, maxX, minY, maxY)
 	return Vector(math.random(minX, maxX), math.random(minY, maxY))
 end
@@ -197,9 +201,8 @@ local CACHE_FLAGS = {
 }
 
 function david_pack:addRandomCache(amount)
+
 	if amount == nil or amount <= 0 then return end
-
-
 
 	local player = Isaac.GetPlayer()
 	for i = 0, amount do

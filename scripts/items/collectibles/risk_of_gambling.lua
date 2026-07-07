@@ -129,7 +129,7 @@ local function SpawnRiskOfGamblingButton(isFirstTime)
 	local currentRoomDesc = level:GetCurrentRoomDesc()
 	if level:GetCurrentRoomIndex() == startingRoomIndex or (currentRoomDesc.Data.Name == "Starting Room" and currentRoomDesc.Data.StageID == 13 and currentRoomDesc.Data.Type == 1) then
 		local room = game:GetRoom()
-		local effectPos = room.GetCenterPos(room) + Vector(0, 80)
+		local effectPos = room.GetCenterPos(room) + Vector(0, 40)
 		Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effect.GAMBLING_BUTTON, 100, effectPos, Vector(0, 0), nil)
 		if isFirstTime == true then
 			Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.POOF01, 0, effectPos, Vector(0, 0), nil)

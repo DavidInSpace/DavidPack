@@ -31,7 +31,7 @@ david_pack.Collectible = {
 	MISERABLE_COINFLIP = Isaac.GetItemIdByName("Miserable Coinflip"),
 	BLESSED_COINFLIP = Isaac.GetItemIdByName("Blessed Coinflip"),
 	SWIFT_COINFLIP = Isaac.GetItemIdByName("Swift Coinflip"),
-	
+
 	-- Certificates --
 	TORN_DEATH_CERTIFICATE = Isaac.GetItemIdByName("Torn Death Certificate"),
 	RUNE_CERTIFICATE = Isaac.GetItemIdByName("Rune Certificate"),
@@ -81,7 +81,7 @@ david_pack.NullItem = {
 	PRISONER_TRANSFORMATION = Isaac.GetNullItemIdByName("Prisoner Transformation"),
 
 	GAMBLING_ADDICT_TRANSFORMATION_COUNTER = Isaac.GetNullItemIdByName("Gambling Addict Transformation Counter"),
-	GAMBLING_ADDICT_TRANSFORMATION  = Isaac.GetNullItemIdByName("Gambling Addict Transformation"),
+	GAMBLING_ADDICT_TRANSFORMATION = Isaac.GetNullItemIdByName("Gambling Addict Transformation"),
 
 	OVERCHARGED_BATTERY_CHARGE = Isaac.GetNullItemIdByName("Overcharged Battery Charge"),
 
@@ -91,9 +91,9 @@ david_pack.NullItem = {
 	SWIFT_COINFLIP_UP = Isaac.GetNullItemIdByName("Swift Coinflip Up"),
 
 	POWERFUL_COINFLIP_DOWN = Isaac.GetNullItemIdByName("Powerful Coinflip Down"),
-	MISERABLE_COINFLIP_DOWN = Isaac.GetNullItemIdByName("Miserable Coinflip Down"),
+	MISERABLE_COINFLIP_DOWN  = Isaac.GetNullItemIdByName("Miserable Coinflip Down"),
 	BLESSED_COINFLIP_DOWN = Isaac.GetNullItemIdByName("Blessed Coinflip Down"),
-	SWIFT_COINFLIP_DOWN = Isaac.GetNullItemIdByName("Swift Coinflip Down"),
+	SWIFT_COINFLIP_DOWN  = Isaac.GetNullItemIdByName("Swift Coinflip Down"),
 
 	HANDCUFFED = Isaac.GetNullItemIdByName("Handcuffed"),
 }
@@ -149,11 +149,15 @@ david_pack.LevelCurse = {
 	CURSE_OF_VISIONLESS = 1 << (Isaac.GetCurseIdByName("Curse of the Visionless!") - 1)
 }
 
-
+david_pack.Challenge = {
+	OVERGAMBLED = Isaac.GetChallengeIdByName("[DP] Overgambled"),
+}
 
 david_pack.Value = {
 	KEYED_ENTITIES_CHANCE = 50,
 }
+
+
 
 
 
@@ -171,7 +175,7 @@ david_pack.RealCollectible = {
 	POWERFUL_COINFLIP = Isaac.GetItemIdByName("Powerful Coinflip"),
 	BLESSED_COINFLIP = Isaac.GetItemIdByName("Blessed Coinflip"),
 	SWIFT_COINFLIP = Isaac.GetItemIdByName("Swift Coinflip"),
-	
+
 	-- Certificates --
 	TORN_DEATH_CERTIFICATE = Isaac.GetItemIdByName("Torn Death Certificate"),
 	RUNE_CERTIFICATE = Isaac.GetItemIdByName("Rune Certificate"),

@@ -57,7 +57,7 @@ mod:AddCallback(ModCallbacks.MC_POST_CURSE_EVAL,
             local chance = math.random(1, 100)
             print("Curse Chance: ", chance)
             local curseReplacementChance = mod.SaveManager.GetSettingsSave().super_curses_chance or 10
-            if chance <= curseReplacementChance and Game():GetLevel():GetStageType() ~= StageType.STAGETYPE_ORIGINAL or Game():GetLevel():GetStageType() ~= StageType.STAGETYPE_AFTERBIRTH and Game():GetLevel():GetStage() ~= LevelStage.STAGE1_1 then
+            if Isaac.GetChallenge() == 0 and chance <= curseReplacementChance and Game():GetLevel():GetStageType() ~= StageType.STAGETYPE_ORIGINAL or Game():GetLevel():GetStageType() ~= StageType.STAGETYPE_AFTERBIRTH and Game():GetLevel():GetStage() ~= LevelStage.STAGE1_1 then
                 --print("Replace Curse With Super Curse")
                 --print(mod.LevelCurse.CURSE_OF_ABSOLUTE_DISORIENTATION, mod.LevelCurse.CURSE_OF_BLACKOUT, mod.LevelCurse.CURSE_OF_THE_CATACOMB)
 

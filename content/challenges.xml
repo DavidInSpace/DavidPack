@@ -1,9 +1,4 @@
 <challenges version = "1">
-   <!-- <challenge name="[DP] Imprisoned" endstage="8" startingitems="Prison Jumpsuit,Handcuffs"/>
-   <challenge name="[DP] Overgambled" playertype="33" coins="20" endstage="10" altpath="true" startingitems="177,Risk Of Gambling" />
-   For the "Ultimate Gambler" challenge:
-    - Make so ALL special rooms are replaced
-    with arcade rooms and portable slots is put in the pocket item slot
-    - Make so there is like a 10% chance an enemy will be replaced by a greed/money related enemy
-    -->
+  <!-- <challenge name="[DP] Imprisoned" endstage="8" startingitems="Prison Jumpsuit,Handcuffs"/>
+   <challenge name="[DP] Overgambled" playertype="33" coins="20" endstage="10" altpath="true" startingitems="416,Risk Of Gambling" />-->
 </challenges>

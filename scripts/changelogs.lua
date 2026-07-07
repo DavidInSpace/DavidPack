@@ -158,10 +158,25 @@ or down after overbent spoon gets rerolled
 in Isaac's inventory (eg. t.eden or D4)
 ]])
 
+DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.0.5", [[
+{{FSIZE3}} Additions:
+- Added new trinket "RGB Countdown"
+
+{{FSIZE3}} Changes:
+- Tweaked coinflip spawn rates a bit
+- Reduced Gambling Button hitbox size
+and moved it up slightly
+- Nerfed Kayos_Fox a little
+
+{{FSIZE3}} Fixes:
+- Fixed multiple coinflips spawning at once
+- Fixed coinflips spawning inside the slot machine 
+]])
 
 --[[DeadSeaScrollsMenu.AddChangelog("David Pack", "V2.1.0", [[
 {{FSIZE3}} Additions:
 - Added a custom challenge "Imprisoned"
+- Added a custom challenfe "Overgambled"
 
 {{FSIZE3}} Changes:
 - lowered default super curses

@@ -42,8 +42,8 @@ mod:AddCallback(ModCallbacks.MC_FAMILIAR_UPDATE, function(_, familiar)
 
     fireCoolDown = fireCoolDown - 1
     if fireCoolDown <= 0 then
-        fireCoolDown = 15 -
-            ((familiar.Player:GetNumCoins() + familiar.Player:GetNumBombs() + familiar.Player:GetNumKeys()) / 22)
+        fireCoolDown = 18 -
+            ((familiar.Player:GetNumCoins() + familiar.Player:GetNumBombs() + familiar.Player:GetNumKeys()) / 23)
         local nearestEnemy = mod:getNearestRoomEnemy(familiar.Position)
         if nearestEnemy ~= nil then
             local shotDirection = nearestEnemy.Position - familiar.Position

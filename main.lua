@@ -73,10 +73,12 @@ include("scripts.items.pickups.cards.expired_lottery_ticket")
 -- Keys --
 include("scripts.items.pickups.keys.handcuffs_key")
 
-
 -- Transformations --
 include("scripts.transformations.prisoner_transformation")
 include("scripts.transformations.gambling_addict_transformation")
+
+-- Challenges --
+include("scripts.challenges.overgambled")
 
 --[[
 
@@ -95,7 +97,8 @@ include("scripts.transformations.gambling_addict_transformation")
 - TODO: Add Leg Shackles
 - [DONE] TODO: Slightly increase the health of enemies and make them receive no knockback with the key effect
 - TODO: Slightly increase the sprite size of enemies with the key effect
-- [DONE] TODO: Add Handcuffs
+- [DONE] TODO: Add Handcuffs|
+- TODO: Make so all stats up/down get removed when dropping rgb countdown trinket
 - TODO: Make so super curses can not show up in challenges
 - TODO: Add a toggle to DSS menu to toggle whether super curses can appear in challenges (Default: false)
 - TODO: Make so all red hearts are always converted to rotten hearts when having dirty prison jumpsuit

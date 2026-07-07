@@ -4,7 +4,7 @@
     <!-- Effects -->
 
 	<entity id="1000" variant="450" subtype="100" name="Gambling Button" anm2path="effect_gamblingbutton.anm2" 
-		friction="1" collisionRadius="10"/>
+		friction="1" collisionRadius="8"/>
 
 	<entity id="1000" variant="451" subtype="100" name="Todo List Button" anm2path="effect_todo_list_button.anm2" 
 		friction="1" collisionRadius="10"/>
